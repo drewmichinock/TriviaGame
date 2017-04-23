@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Week 5: Trivia Game</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/javascript/app.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <!-- end col-md-3 -->
+            <div class="col-md-6">
+                <h2 class="text-center">State Trivia Game</h2>
+                <h4 class="text-center">Time Remaining: <span id="timer"></span></h4>
+            </div>
+            <!-- end col-md-6 -->
+            <div class="col-md-3"></div>
+            <!-- end col-md-3 -->
+        </div>
+        <!-- end row -->
+        <div class="row">
+            <div class="col-md-1"></div>
+            <!-- end col-md-1 -->
+            <div class="col-md-10">
+                <div class="text-center"><button id="start" class="btn btn-primary">Start Game</button></div>
+                <form>
+                    <p>1. Has the largest underground cave network in the world</p>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-1" value="option-1"> New Mexico
+                        </label>
+                    </div>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-1" value="option-2"> Kentucky
+                        </label>
+                    </div>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-1" value="option-3"> Missouri
+                        </label>
+                    </div>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-1" value="option-4"> Arizona
+                        </label>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <p>2. Has the longest coastline in the U.S.</p>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-2" value="option-1"> California
+                        </label>
+                    </div>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-2" value="option-2"> Oregon
+                        </label>
+                    </div>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-2" value="option-3"> Alaska
+                        </label>
+                    </div>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-2" value="option-4"> Florida
+                        </label>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <p>3. Has the only royal palace in the U.S.</p>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-3" value="option-1"> Hawaii
+                        </label>
+                    </div>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-3" value="option-2"> Massachussetts
+                        </label>
+                    </div>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-3" value="option-3"> Maine
+                        </label>
+                    </div>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-3" value="option-4"> Texas
+                        </label>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <p>4. Has the world's first drive-in movie theater</p>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-4" value="option-1"> California
+                        </label>
+                    </div>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-4" value="option-2"> New York
+                        </label>
+                    </div>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-4" value="option-3"> Florida
+                        </label>
+                    </div>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-4" value="option-4"> New Jersey
+                        </label>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <p>5. Has The first tea farm in the U.S.</p>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-5" value="option-1"> Iowa
+                        </label>
+                    </div>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-5" value="option-2"> South Carolina
+                        </label>
+                    </div>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-5" value="option-3"> Ohio
+                        </label>
+                    </div>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-5" value="option-4"> North Carolina
+                        </label>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <p>6. Has the most telescopes in the world</p>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-6" value="option-1"> Texas
+                        </label>
+                    </div>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-6" value="option-2"> California
+                        </label>
+                    </div>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-6" value="option-3"> Arizona
+                        </label>
+                    </div>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-6" value="option-4"> New Mexico
+                        </label>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <p>7. Has the only active diamond mine in the U.S.</p>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-7" value="option-1"> Arkansas
+                        </label>
+                    </div>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-7" value="option-2"> Pennsylvania
+                        </label>
+                    </div>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-7" value="option-3"> West Virginia
+                        </label>
+                    </div>
+                    <div class="col-md-2 radio-inline">
+                        <label class="radio-inline">
+                            <input type="radio" name="option-7" value="option-4"> Michigan
+                        </label>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                </form>
+            </div>
+            <!-- end col-md-10 -->
+            <div class="col-md-1">
+            </div>
+            <!-- end col-md-1 -->
+            <!-- end row -->
+        </div>
+    </div>
+    <!-- end row -->
+    <!-- end container -->
+</body>
+
+</html>
